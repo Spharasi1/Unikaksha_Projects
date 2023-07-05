@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+body{
+    border: 5px solid navy;
+    min-height: 100vh;
+}
+
+.hero{
+    padding: 0 100px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 50px;
+}
+
+img{
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    overflow: hidden;
+}
+.content{
+    font-size: x-large;
+    text-align:right;
+}
+
+.about-section{
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: large;
+    line-height: 1.5;
+}
+
+.biography{
+    
+    display: inline-block;
+    margin:40px 0;
+}
+
+.biography ul{
+    margin:20px 40px;
+    line-height: 25px;
+    list-style: square;
+}
+
+footer p{
+    text-align: end;
+    margin-bottom: 15px;
+}
