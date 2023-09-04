@@ -8,9 +8,9 @@ const batteryContainer = document.querySelector(".container");
 
 document.getElementById("btn").addEventListener("click", function(){
     batteryContainer.style.display = "block";
-    batteryDisplay()
 })
 
+batteryDisplay()
 
 function batteryDisplay(){
     navigator.getBattery().then((battery)=>{
@@ -31,7 +31,6 @@ function batteryDisplay(){
         if(battery.charging){
             batteryImg.src = "img/charging.gif"
         } else {
-
             if(percentage<=10){
             batteryWarning.innerHTML = "Bettery is low, Please connect charger."
             batteryImg.src = "img/10.png"
@@ -69,13 +68,12 @@ function batteryDisplay(){
     });
 
     function updateDischargingInfo(){
-        let dischargeTime = Math.round(((battery.dischargingTime)/3600))
+        let dischargeTimeHr = Math.round(((battery.dischargingTime)/3600))
+        let dischargeTimeMin = Math.round(((battery.dischargingTime)%3600)/60)
         if(battery.charging === false){
-            batteryTimeOut.innerHTML = `The Battery will die in ${dischargeTime} Hrs.`
-        }
+            batteryCharging.innerHTML = ""
+            batteryTimeOut.innerHTML = `The Battery will die in ${dischargeTimeHr}hour and ${dischargeTimeMin}minutes.`
+        } 
     }
-
-
-
 
 })};
